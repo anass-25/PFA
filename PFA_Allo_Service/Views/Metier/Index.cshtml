@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+@section styles {
+    <!-- Bootstrap -->
+    <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <!-- Datatables -->
+
+    <link href="~/Admin/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Admin/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Admin/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Admin/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="~/Admin/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+}
+@model List<Metier>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<div class="right_col" role="main">
+    <div class="">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Default Example <small>Users</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Settings 1</a>
+                                <a class="dropdown-item" href="#">Settings 2</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card-box table-responsive">
+                                <a class="btn btn-warning" asp-controller="Metier" asp-action="Add"><i class="fa-sharp fa-solid fa-plus"></i></a>
+                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Catégorie</th>
+                                            <th>Description</th>
+                                            <th>Photo</th>
+                                            <th>Service</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (Metier item in Model)
+                                        {
+                                            <tr class="table-row" data-id="@item.MetierId">
+                                                <td>@item.Categorie</td>
+                                                <td>@item.Description</td>
+                                                <td><img src="@item.Photo" alt="Photo" class="img-thumbnail" style="max-width: 100px;" /></td>
+                                                <td>@item.Service</td>
+                                                <td>
+                                                    <a asp-controller="Metier" asp-action="Update" asp-route-id="@item.MetierId" class="btn btn-sm btn-warning mr-1"><i class="fas fa-edit" title="Modifier"></i></a>
+                                                    <a asp-controller="Metier" asp-action="Details" asp-route-id="@item.MetierId" class="btn btn-sm btn-success mr-1"><i class="fa-solid fa-circle-info"></i></a>
+                                                    <a asp-controller="Metier" asp-action="Delete" asp-route-id="@item.MetierId" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt" title="Supprimer"></i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Animation de survol des lignes du tableau
+            $(".table-row").hover(
+                function () {
+                    $(this).addClass("table-info");
+                },
+                function () {
+                    $(this).removeClass("table-info");
+                }
+            );
+
+            // Animation de suppression d'une ligne du tableau
+            $("a[asp-action='Delete']").click(function (e) {
+                e.preventDefault();
+                var row = $(this).closest("tr");
+                var id = row.data("id");
+                if (confirm("Êtes-vous sûr de vouloir supprimer cet élément ?")) {
+                    // Animation de suppression avec fadeOut
+                    row.fadeOut(500, function () {
+                        // Appeler l'action de suppression
+                        window.location.href = "/MetierController/Delete/" + id; // Remplacez 'ControllerName' par le nom de votre contrôleur
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- Datatables -->
+    <script src="~/Admin/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/Admin/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Admin/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/Admin/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="~/Admin/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="~/Admin/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/Admin/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="~/Admin/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="~/Admin/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="~/Admin/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/Admin/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="~/Admin/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="~/Admin/vendors/jszip/dist/jszip.min.js"></script>
+    <script src="~/Admin/vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="~/Admin/vendors/pdfmake/build/vfs_fonts.js"></script>
+}

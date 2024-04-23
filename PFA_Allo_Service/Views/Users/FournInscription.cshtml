@@ -1,0 +1,277 @@
+﻿
+@{
+    ViewData["Title"] = "FournInscription";
+    Layout = "~/Views/Shared/Inscription_Layout.cshtml";
+}
+<div class="ff">
+    <section class="wizard-section">
+        <div class="form_wizard wizard_horizontal">
+            <ul class="wizard_steps anchor">
+                <li>
+                    <a href="#step-1" class="selected" isdone="1" rel="1">
+                        <span class="step_no">1</span>
+                        <span class="step_descr">
+                            Step 1<br>
+                            <small>Données Personnel</small>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#step-2" class="disabled" isdone="0" rel="2">
+                        <span class="step_no">2</span>
+                        <span class="step_descr">
+                            Step 2<br>
+                            <small>Données Personnel</small>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#step-3" class="disabled" isdone="0" rel="3">
+                        <span class="step_no">3</span>
+                        <span class="step_descr">
+                            Step 3<br>
+                            <small>Choix d'abbonement</small>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#step-4" class="disabled" isdone="0" rel="4">
+                        <span class="step_no">4</span>
+                        <span class="step_descr">
+                            Step 4<br>
+                            <small>Payement</small>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="stepContainer">
+
+                <div id="step-1" class="content" style="display: block;">
+                    <form class="form-horizontal form-label-left">
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="Nom">
+                                Nom <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" id="Nom" required="required" class="form-control  ">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="Prenom">
+                                Prenom <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" id="Prenom" required="required" class="form-control ">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Ville" class="col-form-label col-md-3 col-sm-3 label-align">Ville  <span class="required">*</span></label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input id="Ville" class="form-control col" type="text" name="Ville">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">Gender <span class="required">*</span></label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <div id="gender" class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-secondary">
+                                        <input type="radio" name="gender" value="male" class="join-btn"> &nbsp; Male &nbsp;
+                                    </label>
+                                    <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-secondary">
+                                        <input type="radio" name="gender" value="female" class="join-btn"> Female
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">
+                                Date de naissance <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input id="Date-de-naissance" class="date-picker form-control" required="required" type="text">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div id="step-2" class="content" style="display: none;">
+                    <form class="form-horizontal form-label-left">
+
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="CIN">
+                                CIN <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" id="CIN" required="required" class="form-control  ">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="Telephone">
+                                Telephone <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" id="Telephone" name="Telephone" required="required" class="form-control ">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Email" class="col-form-label col-md-3 col-sm-3 label-align">Email</label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input id="Email" class="form-control col" type="text" name="Email">
+                            </div>
+                        </div>
+                        @*                       <div class="form-group row">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Gender</label>
+                        <div class="col-md-6 col-sm-6 ">
+                        <div id="gender" class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-secondary">
+                        <input type="radio" name="gender" value="male" class="join-btn"> &nbsp; Male &nbsp;
+                        </label>
+                        <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-secondary">
+                        <input type="radio" name="gender" value="female" class="join-btn"> Female
+                        </label>
+                        </div>
+                        </div>
+                        </div> *@
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">
+                                Mot de passe <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input id="Mot de passe" class="date-picker form-control" required="required" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">
+                                Mot de passe <span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input id="verify Mot de passe" class="date-picker form-control" required="required" type="text">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="step-3" class="content" style="display: none;">
+                    <div class="container mt-5">
+                        <h1 class="text-center mb-4">Choose Your Subscription</h1>
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title">3 Months Subscription</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Get access for 3 months</p>
+                                        <p class="card-text">Price: $30</p>
+                                        <!-- Add more details here -->
+                                        <a href="#" class="btn btn-primary">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title">6 Months Subscription</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Get access for 6 months</p>
+                                        <p class="card-text">Price: $50</p>
+                                        <!-- Add more details here -->
+                                        <a href="#" class="btn btn-primary">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title">12 Months Subscription</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">Get access for 12 months</p>
+                                        <p class="card-text">Price: $90</p>
+                                        <!-- Add more details here -->
+                                        <a href="#" class="btn btn-primary">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="step-4" class="content" style="display: none;">
+                    <div class="container mt-5">
+                        <h1 class="text-center mt-5 mb-4">Traitement du Paiement</h1>
+
+                        @if (ViewData["Error"] != null)
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                @ViewData["Error"]
+                            </div>
+                        }
+
+                        <form asp-action="ProcessPayment" method="post" class="mb-5">
+
+                            <div class="form-group mb-4">
+                                <label class="font-weight-bold" for="NomTitulaireCarte">Nom du Titulaire de la Carte :</label>
+                                <input type="text" class="form-control" id="NomTitulaireCarte" placeholder="Entrez le nom du titulaire de la carte">
+                                <span class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label class="font-weight-bold" for="NumeroCarteBancaire">Numéro de Carte Bancaire (Pour Démo Uniquement) :</label>
+                                <input type="number" class="form-control" id="NumeroCarteBancaire" placeholder="Entrez le numéro de carte (non stocké)">
+                                <span class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label class="font-weight-bold" for="CodeSecurite">Code de Sécurité :</label>
+                                <input  type="number" class="form-control" id="CodeSecurite" placeholder="Entrez le code de sécurité">
+                                <span  class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label class="font-weight-bold" for="DateExpiration">Date d'Expiration :</label>
+                                <input  type="text" class="form-control" id="DateExpiration" placeholder="Entrez la date d'expiration">
+                                <span  class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label class="font-weight-bold" for="Montant">Montant :</label>
+                                <input  type="number" class="form-control" id="Montant" placeholder="Entrez le montant à payer">
+                                <span  class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label class="font-weight-bold">Type d'Abonnement :</label>
+                                <div class="d-flex ">
+                                    <div class="custom-control custom-radio custom-control-inline mr-4">
+                                        <input type="radio" id="option1" name="TypeAbonnement" class="custom-control-input" value="Option1">
+                                        <label class="custom-control-label mr-4" for="option1">Option 1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline mr-4">
+                                        <input type="radio" id="option2" name="TypeAbonnement" class="custom-control-input" value="Option2">
+                                        <label class="custom-control-label mr-4" for="option2">Option 2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="option3" name="TypeAbonnement" class="custom-control-input" value="Option3">
+                                        <label class="custom-control-label" for="option3">Option 3</label>
+                                    </div>
+                                </div>
+                                <span  class="text-danger"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Valider le Paiement</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+</div>
+

@@ -1,0 +1,247 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PFA_Allo_Service
+build_property.RootNamespace = PFA_Allo_Service
+build_property.ProjectDir = D:\Projet PFA\PFA_Allo_Service\PFA_Allo_Service\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Projet PFA\PFA_Allo_Service\PFA_Allo_Service
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Abonnement/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvbm5lbWVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Abonnement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvbm5lbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Abonnement/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvbm5lbWVudFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Accueil/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Accueil/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Accueil/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Accueil/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2FsZW5kYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Contacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29udGFjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Form_upload.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRm9ybV91cGxvYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Form_Wizard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRm9ybV9XaXphcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/General_Elements.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2VuZXJhbF9FbGVtZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/General_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2VuZXJhbF9Gb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Inbox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5ib3guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Invoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW52b2ljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Lister_Abonnement_Paiement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdGVyX0Fib25uZW1lbnRfUGFpZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Page_403.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFnZV80MDMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Page_404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFnZV80MDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Page_500.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFnZV81MDAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Page_map.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFnZV9tYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Pricing_Tables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJpY2luZ19UYWJsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Table_Dynamic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGFibGVfRHluYW1pYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Fournisseur/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm91cm5pc3NldXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Metier/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0aWVyXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Metier/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0aWVyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Metier/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0aWVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Metier/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0aWVyXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Offre/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmcmVcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Offre/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmcmVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Offre/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmcmVcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Paiement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpZW1lbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Paiement/ProcessPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpZW1lbnRcUHJvY2Vzc1BheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Service/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Service/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Service/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Accueil_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFjY3VlaWxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Admin_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Fournisseur_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZvdXJuaXNzZXVyX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Inscription_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEluc2NyaXB0aW9uX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/LoginAccueil_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luQWNjdWVpbF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Login_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Profile_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFByb2ZpbGVfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Users/CLientInscription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ0xpZW50SW5zY3JpcHRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Users/FournInscription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRm91cm5JbnNjcmlwdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Users/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Users/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/Users/UsersInscription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXNlcnNJbnNjcmlwdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projet PFA/PFA_Allo_Service/PFA_Allo_Service/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
