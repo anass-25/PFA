@@ -1,0 +1,41 @@
+# Ignore les fichiers binaires, les packages NuGet, les références de projet et les fichiers de sortie de compilation
+*.dll
+*.exe
+*.pdb
+*.suo
+*.cache
+*.log
+*.vscode
+*/bin
+*/obj
+
+# Ignore les dossiers générés par les outils d'éditeur
+.vs
+_*
+.sass-cache
+
+# Ignore les fichiers de configuration utilisateur
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Ignore les fichiers de package NuGet
+packages/
+
+# Ignore les fichiers de l'IDE Visual Studio
+*.csproj.user
+*.dotSettings
+
+# Ignore les fichiers de sauvegarde et les fichiers de désactivation
+*.bak
+*.backup
+*.swp
+*.swo
+*.disabled
+
+# Ignore les fichiers de journalisation
+*.log
+
+# Ignore les fichiers d'environnement
+.env
