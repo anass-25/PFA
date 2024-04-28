@@ -33,9 +33,6 @@ namespace PFA_Allo_Service.Migrations
                     b.Property<DateTime>("Date_Debut")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("Date_Fin")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Type_Abonnement")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

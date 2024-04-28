@@ -8,7 +8,6 @@ namespace PFA_Allo_Service.Controllers
     public class AbonnementController : Controller
     {
         MyContext db;
-
         public AbonnementController(MyContext db)
         {
             this.db = db;
@@ -30,7 +29,6 @@ namespace PFA_Allo_Service.Controllers
                 var abonnement = new Abonnement
                 {
                     Date_Debut = abonnementViewModel.Date_Debut,
-                    Date_Fin = abonnementViewModel.Date_Fin,
                     Type_Abonnement = abonnementViewModel.Type_Abonnement,
                 };
                 db.Abonnements.Add(abonnement);
@@ -59,6 +57,7 @@ namespace PFA_Allo_Service.Controllers
                 {
                     return NotFound();
                 }
+                abonnement.Date_Debut = model.Date_Debut;
                 abonnement.Type_Abonnement = model.Type_Abonnement;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -75,6 +74,5 @@ namespace PFA_Allo_Service.Controllers
 			}
 			return RedirectToAction(nameof(Index));
 		}
-
 	}
 }

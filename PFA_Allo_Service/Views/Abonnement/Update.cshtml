@@ -45,33 +45,35 @@
 					</div>
 					<div class="x_content">
 						<br />
-						<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post">
-							@* <input type="hidden" asp-for="ServiceId" /> *@
-							<div class="item form-group">
-								<input asp-for="AbonnementId" hidden/>
-							</div>
-							@* <div class="item form-group">
-								<label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="Date_Debut">
-								</label>
-								<div class="col-md-6 col-sm-6 ">
-									<input asp-for="Date_Debut" class="form-control" />
+						<form asp-action="Update">
+							<input type="hidden" asp-for="AbonnementId" />
+							<div class="form-group">
+								<div class="form-group">
+									<label>Date de Début:</label>
+									<input type="date" asp-for="Date_Debut" class="form-control" />
+									<span asp-validation-for="Date_Debut" class="text-danger"></span>
 								</div>
-								<span asp-validation-for="Date_Debut" class="text-danger"></span>
-							</div>
-							<div class="item form-group">
-								<label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="Date_Fin">
-								</label>
-								<div class="col-md-6 col-sm-6 ">
-									<input asp-for="Date_Fin" class="form-control ">
+								<label>Type d'Abonnement:</label>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" asp-for="Type_Abonnement" value="Mois" />
+									<label class="form-check-label">1 Mois</label>
 								</div>
-								<span asp-validation-for="Date_Fin" class="text-danger"></span>
-							</div> *@
-							<div class="ln_solid"></div>
-							<div class="item form-group">
-								<div class="col-md-6 col-sm-6 offset-md-3">
-									<input type="submit" value="Modifier" class="btn btn-primary" />
+								<div class="form-check">
+									<input class="form-check-input" type="radio" asp-for="Type_Abonnement" value="3 Mois" />
+									<label class="form-check-label">3 Mois</label>
 								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" asp-for="Type_Abonnement" value="6 Mois" />
+									<label class="form-check-label">6 Mois</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" asp-for="Type_Abonnement" value="an" />
+									<label class="form-check-label">An</label>
+								</div>
+								<span asp-validation-for="Type_Abonnement" class="text-danger"></span>
 							</div>
+							<button type="submit" class="btn btn-primary">Enregistrer</button>
+							<a asp-action="Index" class="btn btn-secondary">Annuler</a>
 						</form>
 					</div>
 				</div>

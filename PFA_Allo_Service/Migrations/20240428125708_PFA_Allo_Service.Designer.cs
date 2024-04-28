@@ -12,7 +12,7 @@ using PFA_Allo_Service.Models;
 namespace PFA_Allo_Service.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20240424112512_PFA_Allo_Service")]
+    [Migration("20240428125708_PFA_Allo_Service")]
     partial class PFA_Allo_Service
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,9 +33,6 @@ namespace PFA_Allo_Service.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AbonnementId"), 1L, 1);
 
                     b.Property<DateTime>("Date_Debut")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("Date_Fin")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Type_Abonnement")

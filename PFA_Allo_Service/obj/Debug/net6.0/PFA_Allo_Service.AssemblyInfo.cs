@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PFA_Allo_Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4750f386a6a7622ed9784b5e3acae079bc37731a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8802ee23a7dcc63ef4b1a0a5c68f8ed79b6046d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("PFA_Allo_Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PFA_Allo_Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

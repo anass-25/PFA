@@ -16,7 +16,6 @@ namespace PFA_Allo_Service.Migrations
                     AbonnementId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Date_Debut = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Date_Fin = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Type_Abonnement = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
