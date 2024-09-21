@@ -1,0 +1,111 @@
+﻿@model PFA_Allo_Service.ViewModel.NotificationVM
+
+@{
+    ViewData["Title"] = "Send Notification";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+@section styles {
+    <!-- bootstrap-wysiwyg -->
+    <link href="~/Admin/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="~/Admin/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="~/Admin/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="~/Admin/vendors/starrr/dist/starrr.css" rel="stylesheet">
+}
+
+<div class="right_col" role="main">
+    <div class="">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Send Notification <small>Please fill in the details</small></h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a class="dropdown-item" href="#">Settings 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="close-link"><i class="fa fa-close"></i></a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br />
+                        <form id="addNotificationForm" method="post" data-parsley-validate class="form-horizontal form-label-left">
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="Titre">Title:</label>
+                                <div class="col-md-6 col-sm-6">
+                                    <input type="text" class="form-control" asp-for="Titre" />
+                                    <span asp-validation-for="Titre" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="Contenu">Content:</label>
+                                <div class="col-md-6 col-sm-6">
+                                    <textarea id="Contenu" class="form-control" asp-for="Contenu"></textarea>
+                                    <span asp-validation-for="Contenu" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="userType">Send To:</label>
+                                <div class="col-md-6 col-sm-6">
+                                    <select id="userType" name="userType" class="form-control">
+                                        <option value="Client">Clients</option>
+                                        <option value="Fournisseur">Fournisseurs</option>
+                                        <option value="All">All Users</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="ln_solid"></div>
+
+                            <div class="item form-group">
+                                <div class="col-md-6 col-sm-6 offset-md-3">
+                                    <button type="submit" class="btn btn-primary">Send</button>
+                                    <a href="@Url.Action("List", "Notification")" class="btn btn-secondary">Go to Notification List</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <!-- bootstrap-wysiwyg -->
+    <script src="~/Admin/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="~/Admin/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="~/Admin/vendors/google-code-prettify/src/prettify.js"></script>
+    <!-- Select2 -->
+    <script src="~/Admin/vendors/select2/dist/js/select2.full.min.js"></script>
+    <!-- Switchery -->
+    <script src="~/Admin/vendors/switchery/dist/switchery.min.js"></script>
+    <!-- Parsley -->
+    <script src="~/Admin/vendors/parsleyjs/dist/parsley.min.js"></script>
+    <!-- Autosize -->
+    <script src="~/Admin/vendors/autosize/dist/autosize.min.js"></script>
+    <!-- starrr -->
+    <script src="~/Admin/vendors/starrr/dist/starrr.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/tinymce@5.10.2/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#Contenu',
+            plugins: 'advlist autolink lists link image charmap print preview anchor',
+            toolbar: 'undo redo | formatselect | bold italic underline strikethrough forecolor backcolor | alignleft aligncenter alignright alignjustify | outdent indent | numlist bullist | link image | removeformat | code | fullscreen',
+            menubar: false,
+            statusbar: false
+        });
+    </script>
+}

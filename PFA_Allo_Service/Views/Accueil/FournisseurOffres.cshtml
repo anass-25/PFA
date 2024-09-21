@@ -1,0 +1,127 @@
+﻿@model List<Offre>
+
+@{
+    ViewData["Title"] = "Offres du Fournisseur";
+    Layout = "~/Views/Shared/Accueil_Layout.cshtml";
+}
+<div class="container mt-4">
+    <div class="card mb-4">
+        <div class="card-header text-center">
+            <h2>Informations du Fournisseur</h2>
+        </div>
+        <div class="card-body">
+            <div class="row align-items-center">
+                @{
+                    var fournisseur = Model.FirstOrDefault()?.Fournisseur;
+                    var fournisseurPhoto = fournisseur?.Photo ?? "default.png"; // Utiliser une image par défaut si aucune photo n'est disponible
+                }
+                <div class="col-md-3 text-center">
+                    <img src="~/images/@fournisseurPhoto" class="fournisseur-photo" alt="Photo du Fournisseur">
+                </div>
+                <div class="col-md-9">
+                    <div class="text-center">
+                        <h4 class="card-title">@fournisseur?.Nom @fournisseur?.Prenom</h4>
+                        <p class="card-text"><strong>Tel :</strong> @fournisseur?.Telephone</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (Model != null && Model.Count > 0)
+{
+    <div class="container">
+        @{
+            bool addRow = true;
+            List<PFA_Allo_Service.Models.Offre> offreList = Model.ToList();
+            DateTime currentDate = DateTime.Now;
+
+            foreach (var offre in offreList)
+            {
+                if (addRow)
+                {
+                    @:<div class="mb-5"></div>
+                    @:<div class="row row-cols-1 row-cols-md-3 g-4">
+                    addRow = false;
+                }
+
+                <div class="col">
+                    @{
+                        bool isExpired = currentDate > offre.Date_Fin;
+                        string cardClass = isExpired ? "card h-100 shadow-sm expired-offer" : "card h-100 shadow-sm";
+                    }
+                    <div class="@cardClass">
+                        <img src="~/images/@offre.Photo" class="card-img-top offre-image" alt="Offre Image">
+                        <div class="card-body">
+                            <h5 class="card-title">@offre.Titre</h5>
+                            <p class="card-text">@offre.Description</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Prix:</strong> @offre.Prix</li>
+                                <li class="list-group-item"><strong>Date de Début:</strong> @offre.Date_Debut.ToShortDateString()</li>
+                                <li class="list-group-item"><strong>Date de Fin:</strong> @offre.Date_Fin.ToShortDateString()</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                if ((offreList.IndexOf(offre) + 1) % 3 == 0 || offreList.IndexOf(offre) == offreList.Count - 1)
+                {
+                    addRow = true;
+                    @:</div>
+                    @:<div class="mb-5"></div>
+                }
+            }
+        }
+
+        @if (offreList.Count % 3 != 0)
+        {
+            @:</div>
+        }
+    </div>
+}
+else
+{
+    <div class="container mt-4">
+        <div class="alert alert-warning text-center">
+            Aucune offre trouvée pour ce fournisseur.
+        </div>
+    </div>
+}
+
+<style>
+    .offre-image {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .fournisseur-photo {
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .expired-offer {
+        filter: grayscale(100%);
+        pointer-events: none;
+    }
+
+    .card-header {
+        background-color: #FFA500;
+        /* #f8f9fa; couleur blanc */
+    }
+
+    .card-title {
+        margin-bottom: 0;
+    }
+
+    .card-text {
+        margin-top: 0.5rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+</style>

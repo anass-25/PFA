@@ -4,6 +4,7 @@ namespace PFA_Allo_Service.ViewModel
 {
     public class ChangePasswordVM
     {
+        public int UserId { get; set; }
         [Required(ErrorMessage = "Le mot de passe actuel est requis.")]
         [DataType(DataType.Password)]
         public string CurrentPassword { get; set; }

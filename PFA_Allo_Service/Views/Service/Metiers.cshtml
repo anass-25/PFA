@@ -1,0 +1,57 @@
+﻿@model List<Metier>
+
+@{
+    ViewData["Title"] = "Metiers";
+    Layout = "~/Views/Shared/Accueil_Layout.cshtml";
+}
+
+@section styles {
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .Metier-image {
+            height: 200px; /* Spécifiez la hauteur souhaitée */
+            object-fit: cover; /* Assure que l'image couvre la zone définie par la hauteur */
+        }
+
+        .mb-5 {
+            margin-bottom: 3rem !important;
+        }
+    </style>
+}
+
+@if (Model.Any())
+{
+    <div class="container">
+        <div class="mb-5"></div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var metier in Model)
+            {
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="~/images/@metier.Photo" class="card-img-top Metier-image" alt="Metier Image">
+                        <div class="card-body">
+                            <h5 class="card-title">@metier.Categorie</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Description:</strong> @metier.Description</li>
+                                <li class="list-group-item"><strong>Service :</strong> @metier.service?.Libelle</li>
+                            </ul>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-primary" onclick="location.href='@Url.Action("ListeFournisseurs", "Accueil", new { metierId = metier.MetierId })'">Liste de Fournisseur</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="mb-5"></div>
+    </div>
+}
+else
+{
+    <p>Aucun métier trouvé.</p>
+}

@@ -1,0 +1,177 @@
+﻿@model DashboardViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<!-- page content -->
+<div class="right_col" role="main">
+    <!-- top tiles -->
+    <div class="row" style="display: inline-block;">
+        <div class="tile_count">
+            <div class="col-md-2 col-sm-4 tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Total Clients</span>
+                <div class="count">@Model.NombreClients</div>
+                @* <span class="count_bottom"><i class="green">4% </i> From last Week</span> *@
+            </div>
+            <div class="col-md-2 col-sm-4 tile_stats_count">
+                <span class="count_top"><i class="fa fa-clock-o"></i>Total Fournisseurs</span>
+                <div class="count">@Model.NombreFournisseurs</div>
+                @* <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span> *@
+            </div>
+            <div class="col-md-2 col-sm-4 tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Total Services</span>
+                <div class="count green">@Model.NombreServices</div>
+                @* <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span> *@
+            </div>
+            <div class="col-md-2 col-sm-4 tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Total Métiers</span>
+                <div class="count">@Model.NombreMetiers</div>
+                @* <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span> *@
+            </div>
+            <div class="col-md-2 col-sm-4 tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Total Administrateus</span>
+                <div class="count">@Model.NombreAdministrateurs</div>
+                @* <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span> *@
+            </div>
+            @* <div class="col-md-2 col-sm-4 tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Total </span>
+                <div class="count"></div>
+                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+            </div> *@
+        </div>
+    </div>
+    <!-- /top tiles -->
+    <br />
+
+    <!-- New Dashboard Content -->
+    <div class="row">
+        @* <div class="col-md-4 col-sm-4">
+            <div class="x_panel tile fixed_height_320">
+                <div class="x_title">
+                    <h2>Nombre de Clients</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <h4>@Model.NombreClients</h4>
+                </div>
+            </div>
+        </div> 
+        <div class="col-md-4 col-sm-4">
+            <div class="x_panel tile fixed_height_320">
+                <div class="x_title">
+                    <h2>Nombre de Fournisseurs</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <h4>@Model.NombreFournisseurs</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="x_panel tile fixed_height_320">
+                <div class="x_title">
+                    <h2>Nombre de Services</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <h4>@Model.NombreServices</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="x_panel tile fixed_height_320">
+                <div class="x_title">
+                    <h2>Nombre de Métiers</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <h4>@Model.NombreMetiers</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="x_panel tile fixed_height_320">
+                <div class="x_title">
+                    <h2>Nombre d'Administrateurs</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <h4>@Model.NombreAdministrateurs</h4>
+                </div>
+            </div>
+        </div>*@
+    </div>
+
+    <!-- Chart.js Charts -->
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Diagramme circulaire</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Diagramme à bandes</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const pieData = {
+        labels: ['Clients', 'Fournisseurs', 'Services', 'Métiers', 'Administrateurs'],
+        datasets: [{
+            data: [@Model.NombreClients, @Model.NombreFournisseurs, @Model.NombreServices, @Model.NombreMetiers, @Model.NombreAdministrateurs],
+            backgroundColor: ['#007bff', '#28a745', '#17a2b8', '#ffc107', '#dc3545']
+        }]
+    };
+
+    const pieConfig = {
+        type: 'pie',
+        data: pieData
+    };
+
+    const barData = {
+        labels: ['Clients', 'Fournisseurs', 'Services', 'Métiers', 'Administrateurs'],
+        datasets: [{
+            label: 'Nombre',
+            data: [@Model.NombreClients, @Model.NombreFournisseurs, @Model.NombreServices, @Model.NombreMetiers, @Model.NombreAdministrateurs],
+            backgroundColor: ['#007bff', '#28a745', '#17a2b8', '#ffc107', '#dc3545']
+        }]
+    };
+
+    const barConfig = {
+        type: 'bar',
+        data: barData,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    };
+
+    window.onload = function () {
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        new Chart(pieCtx, pieConfig);
+
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        new Chart(barCtx, barConfig);
+    };
+</script>

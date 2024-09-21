@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Metier";
+    Layout = "~/Views/Shared/Accueil_Layout.cshtml";
+}
+@section styles {
+   <style>
+        .card-img-top {
+            width: 100%;
+            height: 200px; /* Vous pouvez ajuster cette hauteur selon vos besoins */
+            object-fit: cover;
+        }
+    </style>
+}
+
+@if (ViewData["Metiers"] is IEnumerable<Metier> Metiers)
+{
+    <div class="container">
+        @{
+            bool addRow = true;
+            List<Metier> MetierList = Metiers.ToList();
+
+            foreach (var Metier in MetierList)
+            {
+                if (addRow)
+                {
+                    @:<div class="mb-5"> </div> 
+                    @:    <div class="row row-cols-1 row-cols-md-3 g-4">              
+                    addRow = false;
+                }
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="~/images/@Metier.Photo" class="card-img-top Metier-image" alt="Metier Image">
+                        <div class="card-body">
+                            <h5 class="card-title">@Metier.Categorie</h5> 
+                            @*<p class="card-text">@Metier.Description</p>*@
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Description:</strong> @Metier.Description</li>
+                                <li class="list-group-item"><strong>service :</strong> @Metier.service?.Libelle</li>
+                               
+                            </ul>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-primary" onclick="location.href='@Url.Action("ListeFournisseurs", "Accueil", new { metierId = Metier.MetierId })'">Liste de Fournisseur</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                if ((MetierList.IndexOf(Metier) + 1) % 3 == 0 || MetierList.IndexOf(Metier) == MetierList.Count() - 1)
+                {
+                    addRow = true;
+                    @:</div>
+                    @:<div class="mb-5"> </div> 
+                }
+            }
+        }
+
+        @if (MetierList.Count() % 3 != 0)
+        {
+            @:</div>
+        }
+    </div>
+}
+else
+{
+    <p>No offers found.</p>
+}
+<style>
+    .Metier-image {
+        height: 200px; /* Spécifiez la hauteur souhaitée */
+        object-fit: cover; /* Assure que l'image couvre la zone définie par la hauteur */
+    }
+</style>

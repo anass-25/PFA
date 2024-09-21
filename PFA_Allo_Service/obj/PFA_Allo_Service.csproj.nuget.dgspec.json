@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACER\\Desktop\\PFA_Allo_Service\\PFA_Allo_Service\\PFA_Allo_Service.csproj": {}
+    "C:\\Users\\ACER\\Desktop\\PFAAlloService\\PFA\\PFA_Allo_Service\\PFA_Allo_Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER\\Desktop\\PFA_Allo_Service\\PFA_Allo_Service\\PFA_Allo_Service.csproj": {
+    "C:\\Users\\ACER\\Desktop\\PFAAlloService\\PFA\\PFA_Allo_Service\\PFA_Allo_Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\PFA_Allo_Service\\PFA_Allo_Service\\PFA_Allo_Service.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\PFAAlloService\\PFA\\PFA_Allo_Service\\PFA_Allo_Service.csproj",
         "projectName": "PFA_Allo_Service",
-        "projectPath": "C:\\Users\\ACER\\Desktop\\PFA_Allo_Service\\PFA_Allo_Service\\PFA_Allo_Service.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\PFAAlloService\\PFA\\PFA_Allo_Service\\PFA_Allo_Service.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Desktop\\PFA_Allo_Service\\PFA_Allo_Service\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\PFAAlloService\\PFA\\PFA_Allo_Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FoolProof.Core": {
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.28, )"
@@ -84,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

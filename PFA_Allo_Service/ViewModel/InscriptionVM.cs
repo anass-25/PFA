@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using PFA_Allo_Service.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace PFA_Allo_Service.ViewModel
 {
-    public class InscriptionVM
+    public class InscriptionVM 
     {
         [Required(ErrorMessage = "Le champ Nom est requis.")]
         [StringLength(50, ErrorMessage = "Le champ Nom ne peut pas dépasser 50 caractères.")]
@@ -13,10 +14,10 @@ namespace PFA_Allo_Service.ViewModel
         public string Prenom { get; set; }
 
         [Required(ErrorMessage = "Le champ CIN est requis.")]
-        [RegularExpression("[0-9]{5,6}", ErrorMessage = "vous devez respecter la format de CIN.")]
-        public int CIN { get; set; }
+        [RegularExpression("[A-Z]{1,2}[0-9]{5,6}", ErrorMessage = "vous devez respecter la format de CIN.")]
+        public string CIN { get; set; }
 
-        [Required(ErrorMessage = "Le champ Téléphone est requis.")]
+        [Required(ErrorMessage = "Le champ Telephone est requis.")]
         //[RegularExpression("[0-9]{10}", ErrorMessage = "Le champ Téléphone doit être un nombre à 10 chiffres.")]
         public int Telephone { get; set; }
 
@@ -34,9 +35,8 @@ namespace PFA_Allo_Service.ViewModel
         [Compare("Mot_de_Passe", ErrorMessage = "Le champ Confirmation Mot de Passe doit correspondre au Mot de Passe.")]
         [DataType(DataType.Password)]
         public string Confirm_MDP { get; set; }
-
-        public string Localiation { get; set; }
-        public bool Disponibilite { get; set; }
-
+        public string? Localisation { get; set; }
+        public string Disponibiliter { get; set; }
+        public int? MetierId { get; set; }
     }
 }

@@ -9,239 +9,223 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PFA_Allo_Service
 build_property.RootNamespace = PFA_Allo_Service
-build_property.ProjectDir = C:\Users\ACER\Desktop\PFA_Allo_Service\PFA_Allo_Service\
+build_property.ProjectDir = C:\Users\ACER\Desktop\PFAAlloService\PFA\PFA_Allo_Service\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ACER\Desktop\PFA_Allo_Service\PFA_Allo_Service
+build_property.MSBuildProjectDirectory = C:\Users\ACER\Desktop\PFAAlloService\PFA\PFA_Allo_Service
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Abonnement/Create.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Abonnement/abonnement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvbm5lbWVudFxhYm9ubmVtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Abonnement/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvbm5lbWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Abonnement/Index.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Abonnement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvbm5lbWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Abonnement/Update.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Abonnement/Paiement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvbm5lbWVudFxQYWllbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Abonnement/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvbm5lbWVudFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Accueil/About.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxBYm91dC5jc2h0bWw=
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Accueil/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Accueil/Contact.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Accueil/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Accueil/Index.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Accueil/FournisseurOffres.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxGb3Vybmlzc2V1ck9mZnJlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Accueil/Fournisseurs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxGb3Vybmlzc2V1cnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Accueil/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Accueil/Services.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Accueil/IndexAvis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxJbmRleEF2aXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Accueil/ListeFournisseurs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxMaXN0ZUZvdXJuaXNzZXVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Accueil/Metier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxNZXRpZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Accueil/Offre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxPZmZyZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Accueil/Services.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxTZXJ2aWNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Calendar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2FsZW5kYXIuY3NodG1s
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Accueil/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjdWVpbFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Contacts.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29udGFjdHMuY3NodG1s
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Admin/Gestion_Metier_Fournisseur.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2VzdGlvbl9NZXRpZXJfRm91cm5pc3NldXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Form_upload.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRm9ybV91cGxvYWQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Form_Wizard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRm9ybV9XaXphcmQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/General_Elements.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2VuZXJhbF9FbGVtZW50cy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/General_Form.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2VuZXJhbF9Gb3JtLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Inbox.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5ib3guY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Index.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Invoice.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW52b2ljZS5jc2h0bWw=
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Admin/_MetiersTablePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX01ldGllcnNUYWJsZVBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Lister_Abonnement_Paiement.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdGVyX0Fib25uZW1lbnRfUGFpZW1lbnQuY3NodG1s
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Fournisseur/Gestion_Offre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm91cm5pc3NldXJcR2VzdGlvbl9PZmZyZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Page_403.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFnZV80MDMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Page_404.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFnZV80MDQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Page_500.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFnZV81MDAuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Page_map.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFnZV9tYXAuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Pricing_Tables.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJpY2luZ19UYWJsZXMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Profile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZmlsZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Admin/Table_Dynamic.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGFibGVfRHluYW1pYy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Fournisseur/Index.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Fournisseur/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm91cm5pc3NldXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Home/Index.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Home/Privacy.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Metier/Add.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Metier/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0aWVyXEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Metier/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0aWVyXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Metier/Index.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Metier/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0aWVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Metier/Update.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Metier/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0aWVyXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Offre/Add.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Notification/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Notification/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2F0aW9uXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Offre/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmcmVcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Offre/Index.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Offre/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmcmVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Offre/Update.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Offre/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmcmVcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Paiement/Index.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Paiement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpZW1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Paiement/ProcessPayment.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Paiement/ProcessPayment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpZW1lbnRcUHJvY2Vzc1BheW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Service/Add.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Reclamation/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjbGFtYXRpb25cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Reclamation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjbGFtYXRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Service/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Service/Index.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Service/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Service/Update.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Service/Metiers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxNZXRpZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Service/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Accueil_Layout.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Shared/AccueilFournisseur_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFjY3VlaWxGb3Vybmlzc2V1cl9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Shared/Accueil_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFjY3VlaWxfTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Admin_Layout.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Shared/Admin_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Error.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Fournisseur_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZvdXJuaXNzZXVyX0xheW91dC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Inscription_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEluc2NyaXB0aW9uX0xheW91dC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/LoginAccueil_Layout.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Shared/LoginAccueil_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luQWNjdWVpbF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Login_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ2luX0xheW91dC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/Profile_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFByb2ZpbGVfTGF5b3V0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/_Layout.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Users/CLientInscription.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ0xpZW50SW5zY3JpcHRpb24uY3NodG1s
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Users/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Users/FournInscription.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRm91cm5JbnNjcmlwdGlvbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Users/Login.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Users/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Users/Profile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUHJvZmlsZS5jc2h0bWw=
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Users/modifierProfils.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcbW9kaWZpZXJQcm9maWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/Users/UsersInscription.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/Users/UsersInscription.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVXNlcnNJbnNjcmlwdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/_ViewImports.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ACER/Desktop/PFA_Allo_Service/PFA_Allo_Service/Views/_ViewStart.cshtml]
+[C:/Users/ACER/Desktop/PFAAlloService/PFA/PFA_Allo_Service/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

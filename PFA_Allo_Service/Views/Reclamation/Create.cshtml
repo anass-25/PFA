@@ -1,0 +1,64 @@
+﻿@model Reclamation
+@{
+    ViewData["Title"] = "Create";
+    var userType = ViewData["UserType"] as string;
+    if (userType == "Fournisseur")
+    {
+        Layout = "~/Views/Shared/AccueilFournisseur_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/Accueil_Layout.cshtml";
+    }
+}
+
+<!--/inner-page-->
+<div class="inner-banner">
+    <!-- Contenu facultatif de la bannière intérieure, à remplir selon les besoins -->
+</div>
+
+<section class="w3l-breadcrumb">
+    <div class="container">
+        <ul class="breadcrumbs-custom-path">
+            <li><a href="@Url.Action("Index", "User")">Home</a></li>
+            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span>Contact Us</li>
+        </ul>
+    </div>
+</section>
+<!--//inner-page-->
+
+<section class="w3l-contact-1 py-5" id="contact">
+    <div class="contacts-9 py-lg-5 py-md-4">
+        <div class="container">
+            <div class="contactct-fm map-content-9">
+                <div class="header-title text-center">
+                    <h6 class="title-subhny"><span>Contactez-nous</span></h6>
+                    <h3 class="title-w3l mb-2">
+                        Parlons de
+                        <span class="span-bold">votre projet</span>
+                    </h3>
+                    <p class="mb-sm-5 mb-4">
+                        Commencez à travailler avec nous pour tout ce dont vous avez besoin pour générer de la visibilité,
+                        attirer du trafic,
+                        se connecter. <br> Nous garantissons que vous pourrez résoudre tout problème dans les 24 heures.
+                    </p>
+                </div>
+                <form asp-action="Create" method="post" class="pt-lg-4">
+                    <div class="form-group">
+                        <label for="description">Votre Réclamation :</label>
+                        <input type="text" class="form-control" id="description" name="Description" placeholder="Entrez votre réclamation">
+                        <span class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer Réclamation</button>
+                </form>
+            </div>
+            <div class="row contact-view mt-5 pt-lg-5">
+                <!-- Contenu des détails de contact à afficher -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="map-content-9">
+    <!-- Contenu facultatif de la carte à insérer ici -->
+</div>

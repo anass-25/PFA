@@ -1,12 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.EntityFrameworkCore;
+using PFA_Allo_Service.Models;
 namespace PFA_Allo_Service.Controllers
 {
     public class AdminController : Controller
     {
+        MyContext db;
+        public AdminController(MyContext db)
+        {
+            this.db = db;
+        }
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Dashboard");
         }
 		public IActionResult Gestion_Service()
 		{
@@ -14,9 +20,33 @@ namespace PFA_Allo_Service.Controllers
 		}
         public IActionResult Gestion_Metier_Fournisseur()
         {
-            return RedirectToAction("Index","Metier");
+            var metiers = db.Metiers
+                .Include(m => m.service)
+                .Include(m => m.Fournisseurs)
+                .Select(m => new
+                {
+                    Metier = m,
+                    Service = m.service,
+                    NombreFournisseurs = m.Fournisseurs.Count()
+                }).ToList();
+
+            return View(metiers);
         }
-		public IActionResult Gestion_Abonnement()
+        public IActionResult MetiersPartial()
+        {
+            var metiers = db.Metiers
+                .Include(m => m.service)
+                .Include(m => m.Fournisseurs)
+                .Select(m => new
+                {
+                    Metier = m,
+                    Service = m.service,
+                    NombreFournisseurs = m.Fournisseurs.Count()
+                }).ToList();
+
+            return PartialView("_MetiersTablePartial", metiers);
+        }
+        public IActionResult Gestion_Abonnement()
 		{
 			return RedirectToAction("Index", "Abonnement");
 		}
@@ -24,63 +54,7 @@ namespace PFA_Allo_Service.Controllers
         {
             return RedirectToAction("Index", "Paiement");
         }
-        public IActionResult General_Form()
-        {
-            return View();
-        }
-        public IActionResult Lister_Abonnement_Paiement()
-        {
-            return View();
-        }
-        public IActionResult Form_upload()
-        {
-            return View();
-        }
-        public IActionResult General_Elements()
-        {
-            return View();
-        }
-        public IActionResult Invoice()
-        {
-            return View();
-        }
-        public IActionResult Inbox()
-        {
-            return View();
-        }
-        public IActionResult Calendar()
-        {
-            return View();
-        }
-        public IActionResult Table_Dynamic()
-        {
-            return View();
-        }
-        public IActionResult Contacts()
-        {
-            return View();
-        }
-        public IActionResult Profile()
-        {
-            return View();
-        }
-        public IActionResult Login()
-        {
-            return View();
-        }
         public IActionResult Pricing_Tables()
-        {
-            return View();
-        }
-        public IActionResult Page_403()
-        {
-            return View();
-        }
-        public IActionResult Page_404()
-        {
-            return View();
-        }
-        public IActionResult Page_500()
         {
             return View();
         }

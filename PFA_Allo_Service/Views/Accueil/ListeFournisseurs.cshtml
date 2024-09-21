@@ -1,0 +1,154 @@
+﻿@{
+    ViewData["Title"] = "ListeFournisseurs";
+    Layout = "~/Views/Shared/Accueil_Layout.cshtml";
+}
+@model IEnumerable<Fournisseur>
+@inject IHttpContextAccessor HttpContextAccessor
+<div class="inner-banner mb-6"></div>
+
+@if (Model != null && Model.Any())
+{
+    <div class="container">
+        @{
+            bool addRow = true;
+            int count = 0;
+
+            foreach (var fournisseur in Model)
+            {
+                if (addRow)
+                {
+                    @:<div class="mb-5"></div>
+                    @:<div class="row row-cols-1 row-cols-md-3 g-4">
+                    addRow = false;
+                }
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="~/Accueil/assets/images/1.jpg" class="card-img-top" alt="Fournisseur Image">
+                        <div class="card-body theme-card">
+                            <h5 class="card-title">
+                                @if (fournisseur.metier != null)
+                                {
+                                    @fournisseur.metier.Categorie
+                                }
+                                else
+                                {
+                                    @:"No Metier"
+                                }
+                            </h5>
+                            <p class="card-text">@fournisseur.Nom @fournisseur.Prenom</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Description:</strong>
+                                    @if (fournisseur.metier != null)
+                                    {
+                                        @fournisseur.metier.Description
+                                    }
+                                    else
+                                    {
+                                        @:"No Description"
+                                    }
+                                </li>
+                                <li class="list-group-item"><i class="fas fa-building"></i> Address: @fournisseur.Nom</li>
+                                <li class="list-group-item"><i class="fas fa-phone"></i> Télèphone: @fournisseur.Telephone</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <div class="rating">
+                                    <div class="rating-container">
+                                        <span class="selected-rating">
+                                            @{
+                                                decimal averageRating = 0;
+                                                int voteCount = 0;
+                                                if (fournisseur.Avis?.Any() == true)
+                                                {
+                                                    averageRating = (decimal)fournisseur.Avis.Average(a => a.Note);
+                                                    voteCount = fournisseur.Avis.Count();
+                                                }
+                                                for (int i = 1; i <= 5; i++)
+                                                {
+                                                    if (i <= Math.Floor(averageRating))
+                                                    {
+                                                        <i class="fas fa-star rating-star text-warning" data-value="@i"></i>
+                                                    }
+                                                    else if (i - 0.5 <= (double)averageRating && i > Math.Floor(averageRating))
+                                                    {
+                                                        <i class="fas fa-star-half-alt rating-star text-warning" data-value="@i"></i>
+                                                    }
+                                                    else
+                                                    {
+                                                        <i class="fas fa-star rating-star" data-value="@i"></i>
+                                                    }
+                                                }
+                                            }
+                                        </span>
+                                        <span class="vote-count">(@voteCount)</span>
+                                        <input type="hidden" id="averageRating" value="@averageRating" />
+                                    </div>
+                                </div>
+                                <span id="rating-message"></span>
+                                <div class="btn-group">
+                                    @if (HttpContextAccessor.HttpContext?.Session.GetInt32("Id") != null){
+                                        <button type="button" class="btn btn-sm btn-success message-btn"><i class="fas fa-comments"></i> Message</button>
+                                    }
+                                    else
+                                    {
+                                        <button type="button" class="btn btn-sm btn-success message-btn" disabled><i class="fas fa-comments"></i> Message</button>
+                                    }
+                                    @*  <div class="btn-group">
+                                    //     <!-- Bouton pour afficher les offres -->
+                                    //     <a href="@Url.Action("Offre", "Accueil", new { fournisseurId = fournisseur.FournisseurId })" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i> Offres</a>
+                                    // </div>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                count++;
+                if (count % 3 == 0)
+                {
+                    addRow = true;
+                    @:</div>
+                    @:<div class="mb-5"></div>
+                }
+            }
+
+            // Close the row if there are remaining items
+            if (count % 3 != 0)
+            {
+                @:</div>
+            }
+        }
+    </div>
+}
+else
+{
+    <p>No fournisseurs found.</p>
+}
+
+<div id="chat-window" class="d-none"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var messageBtns = document.querySelectorAll(".message-btn");
+    messageBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            var chatWindow = document.getElementById("chat-window");
+            chatWindow.classList.remove("d-none");
+            chatWindow.classList.add("show");
+            var chatInput = chatWindow.querySelector("input[type='text']");
+            var sendBtn = chatWindow.querySelector(".send-btn");
+            chatInput.disabled = true;
+            sendBtn.disabled = true;
+        });
+    });
+
+    var closeBtn = document.querySelector(".close-btn");
+    if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+            var chatWindow = document.getElementById("chat-window");
+            chatWindow.classList.remove("show");
+            chatWindow.classList.add("d-none");
+        });
+    }
+});
+</script>

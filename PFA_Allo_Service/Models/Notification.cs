@@ -8,9 +8,10 @@ namespace PFA_Allo_Service.Models
         [DataType(DataType.Date)]
         public DateTime Date_Notif { get; set; }
         public string Contenu { get; set; }
+        public string UserType { get; set; }
         public string Titre { get; set; }
-        public Administrateur Administrateur { get; set; }
-        public int  AdministrateurId { get; set; }
+        public Administrateur? Administrateur { get; set; }
+        public int?  AdministrateurId { get; set; }
     }
     //public void Add()
     //{

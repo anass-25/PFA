@@ -17,6 +17,10 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.Name = "MySession"; // essential for GDPR compliance
 });
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddSignalR();
+builder.Services.AddScoped<NotificationHub>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -30,13 +34,13 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
-
+app.MapHub<NotificationHub>("/notificationHub");
 app.UseRouting();
 app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(
 name: "default",
-    pattern: "{controller=Users}/{action=Login}/{id?}");
+    pattern: "{controller=Accueil}/{action=Index}/{id?}");
 
 app.Run();

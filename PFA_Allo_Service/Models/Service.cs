@@ -12,6 +12,7 @@ namespace PFA_Allo_Service.Models
 		public string Description { get; set; }
         //[Required(ErrorMessage = "la photo de service est obligatoire")]
         public string Photo { get; set; }
+        public IList<Metier>? metiers { get; set; }
         public IList<Client_Service>? Clients_Service { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PFA_Allo_Service.Models;
 using PFA_Allo_Service.ViewModel;
 
@@ -11,12 +12,12 @@ namespace PFA_Allo_Service.Controllers
 		{
 			this.db = db;
 		}
-        public IActionResult Index()
+		public IActionResult Index()
 		{
-			List<Service> services = db.Services.ToList();
-            return View(services);
-        }
-        public IActionResult Add()
+			List<Service> services = db.Services.Include(s => s.metiers).ToList();
+			return View(services);
+		}
+		public IActionResult Add()
 		{
 			return View();
 		}
@@ -77,6 +78,17 @@ namespace PFA_Allo_Service.Controllers
 		{
 
 			return View();
+		}
+		public IActionResult Metiers(int serviceId)
+		{
+			var service = db.Services.Include(s => s.metiers).FirstOrDefault(s => s.ServiceId == serviceId);
+			if (service == null)
+			{
+				return NotFound();
+			}
+			var metiers = service.metiers.ToList(); // Récupérer la liste des métiers associés au service
+
+			return View(metiers);
 		}
 	}
 }

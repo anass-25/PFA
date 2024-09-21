@@ -50,7 +50,7 @@ namespace PFA_Allo_Service.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AvisId"), 1L, 1);
 
-                    b.Property<int>("ClientId")
+                    b.Property<int?>("ClientId")
                         .HasColumnType("int");
 
                     b.Property<string>("Commentaire")
@@ -60,7 +60,7 @@ namespace PFA_Allo_Service.Migrations
                     b.Property<DateTime>("Date_Heures")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("FournisseurId")
+                    b.Property<int?>("FournisseurId")
                         .HasColumnType("int");
 
                     b.Property<int>("Note")
@@ -109,7 +109,7 @@ namespace PFA_Allo_Service.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MessageId"), 1L, 1);
 
-                    b.Property<int>("ClientId")
+                    b.Property<int?>("ClientId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Date_Heures")
@@ -119,7 +119,7 @@ namespace PFA_Allo_Service.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("FournisseurId")
+                    b.Property<int?>("FournisseurId")
                         .HasColumnType("int");
 
                     b.HasKey("MessageId");
@@ -151,11 +151,12 @@ namespace PFA_Allo_Service.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Service")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("ServiceId")
+                        .HasColumnType("int");
 
                     b.HasKey("MetierId");
+
+                    b.HasIndex("ServiceId");
 
                     b.ToTable("Metiers");
                 });
@@ -168,7 +169,7 @@ namespace PFA_Allo_Service.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NotificationId"), 1L, 1);
 
-                    b.Property<int>("AdministrateurId")
+                    b.Property<int?>("AdministrateurId")
                         .HasColumnType("int");
 
                     b.Property<string>("Contenu")
@@ -179,6 +180,10 @@ namespace PFA_Allo_Service.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Titre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -240,7 +245,6 @@ namespace PFA_Allo_Service.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Carte_Paiement")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<float>("Montant")
@@ -263,17 +267,17 @@ namespace PFA_Allo_Service.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReclamationId"), 1L, 1);
 
-                    b.Property<int>("AdministrateurId")
+                    b.Property<int?>("AdministrateurId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ClientId")
+                    b.Property<int?>("ClientId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("FournisseurId")
+                    b.Property<int?>("FournisseurId")
                         .HasColumnType("int");
 
                     b.HasKey("ReclamationId");
@@ -320,8 +324,9 @@ namespace PFA_Allo_Service.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CIN")
-                        .HasColumnType("int");
+                    b.Property<string>("CIN")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -386,14 +391,19 @@ namespace PFA_Allo_Service.Migrations
                 {
                     b.HasBaseType("PFA_Allo_Service.Models.Simple_User");
 
-                    b.Property<int>("AbonnementId")
+                    b.Property<int?>("AbonnementId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Disponibiliter")
-                        .HasColumnType("bit");
+                    b.Property<string>("Disponibiliter")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MetierId")
+                    b.Property<int?>("MetierId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Photo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasIndex("AbonnementId");
 
@@ -407,14 +417,12 @@ namespace PFA_Allo_Service.Migrations
                     b.HasOne("PFA_Allo_Service.Models.Client", "Client")
                         .WithMany("Avis")
                         .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("PFA_Allo_Service.Models.Fournisseur", "Fournisseur")
                         .WithMany("Avis")
                         .HasForeignKey("FournisseurId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Client");
 
@@ -445,27 +453,32 @@ namespace PFA_Allo_Service.Migrations
                     b.HasOne("PFA_Allo_Service.Models.Client", "Client")
                         .WithMany("Messages")
                         .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("PFA_Allo_Service.Models.Fournisseur", "Fournisseur")
                         .WithMany("Messages")
                         .HasForeignKey("FournisseurId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Client");
 
                     b.Navigation("Fournisseur");
                 });
 
+            modelBuilder.Entity("PFA_Allo_Service.Models.Metier", b =>
+                {
+                    b.HasOne("PFA_Allo_Service.Models.Service", "service")
+                        .WithMany("metiers")
+                        .HasForeignKey("ServiceId");
+
+                    b.Navigation("service");
+                });
+
             modelBuilder.Entity("PFA_Allo_Service.Models.Notification", b =>
                 {
                     b.HasOne("PFA_Allo_Service.Models.Administrateur", "Administrateur")
                         .WithMany("Notifications")
-                        .HasForeignKey("AdministrateurId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AdministrateurId");
 
                     b.Navigation("Administrateur");
                 });
@@ -494,20 +507,17 @@ namespace PFA_Allo_Service.Migrations
                     b.HasOne("PFA_Allo_Service.Models.Administrateur", "Administrateur")
                         .WithMany("Reclamations")
                         .HasForeignKey("AdministrateurId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("PFA_Allo_Service.Models.Client", "Client")
                         .WithMany("Reclamations")
                         .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("PFA_Allo_Service.Models.Fournisseur", "Fournisseur")
                         .WithMany("Reclamations")
                         .HasForeignKey("FournisseurId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Administrateur");
 
@@ -520,15 +530,11 @@ namespace PFA_Allo_Service.Migrations
                 {
                     b.HasOne("PFA_Allo_Service.Models.Abonnement", "Abonnement")
                         .WithMany("Fournisseurs")
-                        .HasForeignKey("AbonnementId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AbonnementId");
 
                     b.HasOne("PFA_Allo_Service.Models.Metier", "metier")
                         .WithMany("Fournisseurs")
-                        .HasForeignKey("MetierId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MetierId");
 
                     b.Navigation("Abonnement");
 
@@ -539,8 +545,7 @@ namespace PFA_Allo_Service.Migrations
                 {
                     b.Navigation("Fournisseurs");
 
-                    b.Navigation("Paiement")
-                        .IsRequired();
+                    b.Navigation("Paiement");
                 });
 
             modelBuilder.Entity("PFA_Allo_Service.Models.Metier", b =>
@@ -551,6 +556,8 @@ namespace PFA_Allo_Service.Migrations
             modelBuilder.Entity("PFA_Allo_Service.Models.Service", b =>
                 {
                     b.Navigation("Clients_Service");
+
+                    b.Navigation("metiers");
                 });
 
             modelBuilder.Entity("PFA_Allo_Service.Models.Administrateur", b =>

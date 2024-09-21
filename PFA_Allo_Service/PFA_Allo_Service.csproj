@@ -197,6 +197,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FoolProof.Core" Version="1.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.28" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.28">
       <PrivateAssets>all</PrivateAssets>

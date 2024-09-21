@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "IndexAvis";
+    Layout = "~/Views/Shared/Accueil_Layout.cshtml";
+}
+@model IEnumerable<Avis>
+@section styles {
+    <!-- Select2 -->
+    <link href="~/Admin/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="~/Admin/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="~/Admin/vendors/starrr/dist/starrr.css" rel="stylesheet">
+}
+<!-- page content -->
+<div class="right_col" role="main">
+    <div class="">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Liste des Avis</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br />
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Note</th>
+                                    <th>Date et Heures</th>
+                                    <th>Commentaire</th>
+                                    <th>Afficher</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var avis in Model)
+                                {
+                                    <tr>
+                                        <td>@avis.Note</td>
+                                        <td>@avis.Date_Heures.ToShortDateString()</td>
+                                        <td>@avis.Commentaire</td>
+                                        <td>@(avis.Show ? "Oui" : "Non")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts {
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Select2 -->
+    <script src="~/Admin/vendors/select2/dist/js/select2.full.min.js"></script>
+    <!-- Switchery -->
+    <script src="~/Admin/vendors/switchery/dist/switchery.min.js"></script>
+    <!-- Parsley -->
+    <script src="~/Admin/vendors/parsleyjs/dist/parsley.min.js"></script>
+    <!-- starrr -->
+    <script src="~/Admin/vendors/starrr/dist/starrr.js"></script>
+}

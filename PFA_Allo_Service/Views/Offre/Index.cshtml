@@ -1,7 +1,6 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/Fournisseur_Layout.cshtml";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
 }
 @section styles {
     <!-- Bootstrap -->
@@ -47,53 +46,37 @@
                                 <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>
-                                                Prix
-                                            </th>
-                                            <th>
-                                                Photo
-                                            </th>
-                                            <th>
-                                                Description
-                                            </th>
-                                            <th>
-                                                Date_Debut
-                                            </th>
-                                            <th>
-                                                Date_Fin
-                                            </th>
-                                            <th>
-                                                Titre
-                                            </th>
+                                            <th>Prix</th>
+                                            <th>Photo</th>
+                                            <th>Description</th>
+                                            <th>Date_Debut</th>
+                                            <th>Date_Fin</th>
+                                            <th>Titre</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach (Offre o in Model)
+                                        @foreach (var o in Model)
                                         {
                                             <tr>
+                                                <td>@o.Prix</td>
                                                 <td>
-                                                    @o.Prix
+                                                    @if (!string.IsNullOrEmpty(o.Photo))
+                                                    {
+                                                        <img src="~/images/@o.Photo" alt="Photo" style="width:100px; height:100px;" />
+                                                    }
+                                                    else
+                                                    {
+                                                        <span>No Image</span>
+                                                    }
                                                 </td>
-                                                <td>
-                                                    @o.Photo
-                                                </td>
-
-                                                <td>
-                                                    @o.Description
-                                                </td>
-                                                <td>
-                                                    @o.Date_Debut
-                                                </td>
-                                                <td>
-                                                    @o.Date_Fin
-                                                </td>
-                                                <td>
-                                                    @o.Titre
-                                                </td>
+                                                <td>@o.Description</td>
+                                                <td>@o.Date_Debut.ToString("dd/MM/yyyy")</td>
+                                                <td>@o.Date_Fin.ToString("dd/MM/yyyy")</td>
+                                                <td>@o.Titre</td>
                                                 <td>
                                                     <a class="btn btn-warning" asp-controller="Offre" asp-action="Update" asp-route-id="@o.OffreId"> <i class="fas fa-edit" title="Modifier"></i></a>
-                                                    <a onclick="return confirm(' etes vous  sur de vouloir de supprimer?')" class="btn btn-danger" asp-controller="Offre" asp-action="Delete" asp-route-id="@o.OffreId"><i class="fas fa-trash-alt" title="Supprimer"></i></a>
+                                                    <a onclick="return confirm('êtes-vous sûr de vouloir supprimer?')" class="btn btn-danger" asp-controller="Offre" asp-action="Delete" asp-route-id="@o.OffreId"><i class="fas fa-trash-alt" title="Supprimer"></i></a>
                                                 </td>
                                             </tr>
                                         }
@@ -105,10 +88,9 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 </div>
+
 @section scripts {
     <!-- Datatables -->
     <script src="~/Admin/vendors/datatables.net/js/jquery.dataTables.min.js"></script>

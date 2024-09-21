@@ -6,7 +6,7 @@ namespace PFA_Allo_Service.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index","Accueil");
         }
 		public IActionResult Demande_Service()
 		{

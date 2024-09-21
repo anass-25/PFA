@@ -20,7 +20,7 @@
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Default Example <small>Users</small></h2>
+                    <h2>Liste de service</h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li>
                             <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -50,8 +50,9 @@
                                             <th>Libelle</th>
                                             <th>Description</th>
                                             <th>Photo</th>
+                                            <th>Metiers</th>
                                             <th>Action</th>
-                                            <th>Demande</th>
+                                            @* <th>Demande</th> *@
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -63,11 +64,26 @@
                                                 <td>@s.Description</td>
                                                 <td>@s.Photo</td>
                                                 <td>
+                                                    @if (s.metiers != null && s.metiers.Any())
+                                                    {
+                                                        <ul>
+                                                            @foreach (var metier in s.metiers)
+                                                            {
+                                                                <li>@metier.Categorie</li>
+                                                            }
+                                                        </ul>
+                                                    }
+                                                    else
+                                                    {
+                                                        <p>Aucun métier trouvé</p>
+                                                    }
+                                                </td>
+                                                <td>
                                                     <a onclick="return confirm('Voulez vous supprimer se service ?')" class="btn btn-danger" asp-controller="Service" asp-action="Delete" asp-route-id="@s.ServiceId"><i class="fas fa-trash-alt" title="Supprimer"></i></a>
                                                     <a class="btn btn-warning" asp-controller="Service" asp-action="Update" asp-route-id="@s.ServiceId"><i class="fas fa-edit" title="Modifier"></i></a>
                                                 </td>
-                                                <td><a class="btn btn-warning"><i class="fa-solid fa-hand"></i></a></td>
-                                            </tr>
+@*                                                 <td><a class="btn btn-warning"><i class="fa-solid fa-hand"></i></a></td>
+ *@                                            </tr>
                                         }
                                     </tbody>
                                 </table>

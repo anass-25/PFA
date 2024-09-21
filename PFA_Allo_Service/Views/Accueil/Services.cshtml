@@ -3,155 +3,58 @@
     ViewData["Title"] = "Services";
     Layout = "~/Views/Shared/Accueil_Layout.cshtml";
 }
-<!--/inner-page-->
-<div class="inner-banner">
-</div>
-<section class="w3l-breadcrumb">
+@if (ViewData["Services"] is IEnumerable<Service> services)
+{
     <div class="container">
-        <ul class="breadcrumbs-custom-path">
-            <li><a href="@Url.Action("Index","User")">Home</a></li>
-            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Services</li>
-        </ul>
-    </div>
-</section>
-<!--//inner-page-->
-<!--/services-->
-<section class="w3l-services2" id="services">
-    <div id="cwp23-block" class="py-5">
-        <div class="container py-lg-5">
-            <div class="row cwp23-content mt-lg-5 mt-4">
-                <div class="col-lg-6 cwp23-img">
-                    <h6 class="title-subhny mb-2"><span>What We Offer</span></h6>
-                    <h3 class="title-w3l mb-4">Teamwork means not having taken all the fault.</h3>
-                    <p class="mt-4">
-                        Sed in metus libero. Sed volutpat eget dui ut tempus. Fusce fringilla tincidunt laoreet
-                        Morbi ac metus vitae diam scelerisque malesuada eget eu mauris.Cras varius lorem ac velit pharetra.
+        @{
+            bool addRow = true;
+            List<Service> serviceList = services.ToList();
 
-                    </p>
-                    <p class="mt-4">
-                        Lorem ipsum dolor sit amet,Ea sed illum facere aperiam sequi optio consectetur adipisicing
-                        elit. Cras varius lorem ac velit pharetra, non scelerisque mi vulputate. Phasellus bibendum.
-                    </p>
-                    <div class="w3l-button mt-lg-5 mt-4">
-                        <a href="@Url.Action("Services","User")" class="btn btn-style btn-primary mt-2">Read More </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 cwp23-text mt-lg-0 mt-5 pl-lg-5">
-                    <div class="imgw3l-ab w3l-news">
-                        <div class="grids5-info">
-                            <a href="#" class="d-block zoom"><img src="~/Accueil/assets/imagesab2.jpg" alt="" class="img-fluid news-image"></a>
+            foreach (var service in serviceList)
+            {
+                if (addRow)
+                {
+                    @:<div class="mb-5"> </div> 
+                    @:    <div class="row row-cols-1 row-cols-md-3 g-4">              
+                    addRow = false;
+                }
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="~/images/@service.Photo" class="card-img-top service-image" alt="Service Image">
+                        <div class="card-body">
+                            <h5 class="card-title">@service.Libelle</h5>
+                            <p class="card-text">@service.Description</p>
+                            <div class="btn-group">
+                                @* <button type="button" class="btn btn-sm btn-success"><i class="fas fa-comments"></i> Message</button>*@
+                                 <a href="@Url.Action("Metiers", "Service", new { serviceId = service.ServiceId })" class="btn btn-primary">Liste de Metiers</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!--//services-->
-<!--/w3l-services3-->
-<section class="w3l-services3" id="services">
-    <div class="new-block">
-        <div class="container py-5">
-            <div class="middle-section py-lg-5 py-4">
-                <div class="section-width">
-                    <h6 class="title-subhny mb-2"><span>More Info</span></h6>
-                    <h3 class="title-w3l two mb-4">
-                        Nulla mollis dapibus nunc, ut rhoncus
-                        turpis quis.
-                    </h3>
-                </div>
-                <div class="link-list-menu">
-                    <p class="">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla non ipsum soluta
-                        perferendis
-                        veniam qui esse magnam commodi quisquam vitae labore nemo at voluptatem, totam, minima recusandae
-                        assumenda.
-                    </p>
-                    <div class="w3l-two-buttons">
-                        <a href="@Url.Action("About","User")" class="btn btn-primary btn-white btn-style mt-lg-5 mt-4"> Read More </a>
-                        <a href="@Url.Action("About","User")" class="btn btn-style btn-outline-light mt-lg-5 mt-4 ml-sm-3">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--//w3l-services3-->
-<!--/grids-->
-<section class="w3l-grids-3 py-5">
-    <div class="container py-md-5 py-3">
-        <div class="row bottom-ab-grids align-items-center">
-            <div class="col-lg-6 bottom-ab-left">
-                <h6 class="title-subhny mb-2"><span>Our Services</span></h6>
-                <h3 class="title-w3l mb-4">start experiencing amazing industrial business</h3>
-            </div>
-            <div class="col-lg-6 bottom-ab-right mt-lg-0 mt-3 pl-lg-4">
-                <p class="">
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                    Nulla mollis dapibus nunc, ut rhoncus
-                    turpis sodales quis. Integer sit amet mattis quam.
-                </p>
-            </div>
+                if ((serviceList.IndexOf(service) + 1) % 3 == 0 || serviceList.IndexOf(service) == serviceList.Count() - 1)
+                {
+                    addRow = true;
+                    @:</div>
+                    @:<div class="mb-5"> </div> 
+                }
+            }
+        }
 
-        </div>
-        <div class="row bottom_grids pt-md-3 text-left">
-            <div class="col-lg-4 col-md-6 mt-5">
-                <div class="grid-block">
-                    <a href="blog-single.html" class="d-block p-lg-4 p-3">
-                        <span class="fas fa-truck" aria-hidden="true"></span>
-                        <h4 class="my-3">Power & Energy</h4>
-                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-5">
-                <div class="grid-block">
-                    <a href="blog-single.html" class="d-block p-lg-4 p-3">
-                        <span class="fas fa-american-sign-language-interpreting" aria-hidden="true"></span>
-                        <h4 class="my-3">Mechanical Works</h4>
-                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-5">
-                <div class="grid-block">
-                    <a href="blog-single.html" class="d-block p-lg-4 p-3">
-                        <span class="fas fa-broadcast-tower"></span>
-                        <h4 class="my-3">Logistics Services</h4>
-
-                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-5">
-                <div class="grid-block">
-                    <a href="blog-single.html" class="d-block p-lg-4 p-3">
-                        <span class="fas fa-gas-pump"></span>
-                        <h4 class="my-3">Petroleum Refinery</h4>
-                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-5">
-                <div class="grid-block">
-                    <a href="blog-single.html" class="d-block p-lg-4 p-3">
-                        <span class="fas fa-burn" aria-hidden="true"></span>
-                        <h4 class="my-3">Oil and Gas</h4>
-                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-5">
-                <div class="grid-block">
-                    <a href="blog-single.html" class="d-block p-lg-4 p-3">
-                        <span class="fas fa-industry" aria-hidden="true"></span>
-                        <h4 class="my-3">General Industry</h4>
-                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </a>
-                </div>
-            </div>
-        </div>
+        @if (serviceList.Count() % 3 != 0)
+        {
+            @:</div>
+        }
     </div>
-</section>
-<!--//grids-->
+}
+else
+{
+    <p>No services found.</p>
+}
+<style>
+    .service-image {
+        height: 200px; /* Spécifiez la hauteur souhaitée */
+        object-fit: cover; /* Assure que l'image couvre la zone définie par la hauteur */
+    }
+</style>

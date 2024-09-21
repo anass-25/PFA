@@ -8,6 +8,7 @@ namespace PFA_Allo_Service.ViewModel
         [Required(ErrorMessage = "la Date debut est obligatoire")]
         [DataType(DataType.Date)]
         public DateTime Date_Debut { get; set; }
+        [Required(ErrorMessage ="le type abonnement et obligatoire")]
         public string Type_Abonnement { get; set; }
     }
 }

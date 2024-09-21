@@ -1,139 +1,89 @@
-﻿
-@{
-    ViewData["Title"] = "Update";
-    Layout = "~/Views/Shared/Fournisseur_Layout.cshtml";
+﻿@{
+    ViewData["Title"] = "Modifier Offre";
+    Layout = "~/Views/Shared/AccueilFournisseur_Layout.cshtml";
 }
 @section styles {
-	<!-- bootstrap-wysiwyg -->
-	<link href="~/Admin/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
-	<!-- Select2 -->
-	<link href="~/Admin/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
-	<!-- Switchery -->
-	<link href="~/Admin/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
-	<!-- starrr -->
-	<link href="~/Admin/vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <!-- bootstrap-wysiwyg -->
+    <link href="~/Admin/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="~/Admin/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="~/Admin/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="~/Admin/vendors/starrr/dist/starrr.css" rel="stylesheet">
 }
-@model Offre
-<!-- page content -->
-<div class="right_col" role="main">
-	<div class="">
-		<div class="row">
-			<div class="col-md-12 col-sm-12 ">
-				<div class="x_panel">
-					<div class="x_title">
-						<h2>Form Design <small>different form elements</small></h2>
-						<ul class="nav navbar-right panel_toolbox">
-							<li>
-								<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a class="dropdown-item" href="#">Settings 1</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="#">Settings 2</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a class="close-link"><i class="fa fa-close"></i></a>
-							</li>
-						</ul>
-						<div class="clearfix"></div>
-					</div>
-					<div class="x_content">
-						<br />
-						<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post">
-							@* <input type="hidden" asp-for="ServiceId" /> *@
-							<div class="item form-group">
-								<label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="OffreId">
-								</label>
-								<div class="col-md-6 col-sm-6 ">
-									<input type="text" asp-for="OffreId" class="form-control ">
-								</div>
-							</div>
-							<div class="item form-group">
-								<label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="Prix">
-								</label>
-								<div class="col-md-6 col-sm-6 ">
-									<input asp-for="Prix" class="form-control ">
-								</div>
-								<span asp-validation-for="Prix" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="Photo" class="col-form-label col-md-3 col-sm-3 label-align"></label>
-								<div class="custom-file">
-									@* <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a> *@
-									<input type="file" data-role="magic-overlay" data-target="#pictureBtn" asp-for="Photo" data-edit="insertImage" />
-								</div>
-								<span asp-validation-for="Photo" class="text-danger"></span>
-							</div>
-							<div class="item form-group">
-								<label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="Description">
-								</label>
-								<div class="col-md-6 col-sm-6 ">
-									<textarea asp-for="Description" class="form-control" rows="5"></textarea>
-								</div>
-							</div>
-							<div class="item form-group">
-								<label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="Date_Debut">
-								</label>
-								<div class="col-md-6 col-sm-6 ">
-									<input asp-for="Date_Debut" class="form-control" />
-								</div>
-								<span asp-validation-for="Date_Debut" class="text-danger"></span>
-							</div>
-							<div class="item form-group">
-								<label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="Date_Fin">
-								</label>
-								<div class="col-md-6 col-sm-6 ">
-									<input asp-for="Date_Fin" class="form-control ">
-								</div>
-								<span asp-validation-for="Date_Fin" class="text-danger"></span>
-							</div>
-							<div class="item form-group">
-								<label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="Titre">
-								</label>
-								<div class="col-md-6 col-sm-6 ">
-									<input asp-for="Titre" class="form-control ">
-								</div>
-								<span asp-validation-for="Titre" class="text-danger"></span>
-							</div>
-							<div class="ln_solid"></div>
-							<div class="item form-group">
-								<div class="col-md-6 col-sm-6 offset-md-3">
-									<input type="submit" value="Modifier" class="btn btn-primary" />
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+@model OffreVM
+<div class="inner-banner">
 </div>
+<section class="w3l-breadcrumb">
+    <div class="container">
+        <ul class="breadcrumbs-custom-path">
+            <li><a href="@Url.Action("Index","Fournisseur")">Accueil</a></li>
+            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Modifier l'Offre</li>
+        </ul>
+    </div>
+</section>
+<section class="w3l-contact-1 py-5" id="modifier-offre">
+    <div class="contacts-9 py-lg-5 py-md-4">
+        <div class="container">
+            <div class="contactct-fm map-content-9">
+                <div class="header-title text-center">
+                    <h6 class="title-subhny"><span>Modifier l'Offre</span></h6>
+                    <h3 class="title-w3l mb-2">
+                        Mettez à Jour Votre
+                        <span class="span-bold"> Offre</span>
+                    </h3>
+                </div>
+                <form id="demo-form2" data-parsley-validate class="pt-lg-4" method="post" enctype="multipart/form-data" asp-action="Update" asp-controller="Offre">
+                    <div class="twice-two">
+                        <input type="text" class="form-control" name="Titre" placeholder="Titre" asp-for="Titre" required="">
+                        <span asp-validation-for="Titre" class="text-danger"></span>
+
+                        <input class="form-control" name="Prix" placeholder="Prix" asp-for="Prix" required="">
+                        <span asp-validation-for="Prix" class="text-danger"></span>
+                    </div>
+
+                    <input type="file" class="form-control" name="MonImage" placeholder="Photo" asp-for="Photo" accept="Photo/*">
+                    <span asp-validation-for="Photo" class="text-danger"></span>
+                    <br />
+                    <textarea name="Description" class="form-control" placeholder="Description" asp-for="Description" rows="5" required=""></textarea>
+                    <br />
+                    <div class="twice-two">
+                        <input class="form-control" type="date" name="Date_Debut" placeholder="Date de Début" asp-for="Date_Debut" required="">
+                        <span asp-validation-for="Date_Debut" class="text-danger"></span>
+
+                        <input class="form-control" type="date" name="Date_Fin" placeholder="Date de Fin" asp-for="Date_Fin" required="">
+                        <span asp-validation-for="Date_Fin" class="text-danger"></span>
+                    </div>
+
+                    <div class="text-lg-center">
+                        <button type="submit" class="btn btn-primary btn-style mt-lg-5 mt-4">Mettre à Jour</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 @section scripts {
-	@{
-		await Html.RenderPartialAsync("_ValidationScriptsPartial");
-	}
-	<!-- bootstrap-wysiwyg -->
-	<script src="~/Admin/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-	<script src="~/Admin/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-	<script src="~/Admin/vendors/google-code-prettify/src/prettify.js"></script>
-	<!-- jQuery Tags Input -->
-	<script src="~/Admin/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
-	<!-- Switchery -->
-	<script src="~/Admin/vendors/switchery/dist/switchery.min.js"></script>
-	<!-- Select2 -->
-	<script src="~/Admin/vendors/select2/dist/js/select2.full.min.js"></script>
-	<!-- Parsley -->
-	<script src="~/Admin/vendors/parsleyjs/dist/parsley.min.js"></script>
-	<!-- Autosize -->
-	<script src="~/Admin/vendors/autosize/dist/autosize.min.js"></script>
-	<!-- jQuery autocomplete -->
-	<script src="~/Admin/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
-	<!-- starrr -->
-	<script src="~/Admin/vendors/starrr/dist/starrr.js"></script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <!-- bootstrap-wysiwyg -->
+    <script src="~/Admin/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="~/Admin/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="~/Admin/vendors/google-code-prettify/src/prettify.js"></script>
+    <!-- jQuery Tags Input -->
+    <script src="~/Admin/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+    <!-- Switchery -->
+    <script src="~/Admin/vendors/switchery/dist/switchery.min.js"></script>
+    <!-- Select2 -->
+    <script src="~/Admin/vendors/select2/dist/js/select2.full.min.js"></script>
+    <!-- Parsley -->
+    <script src="~/Admin/vendors/parsleyjs/dist/parsley.min.js"></script>
+    <!-- Autosize -->
+    <script src="~/Admin/vendors/autosize/dist/autosize.min.js"></script>
+    <!-- jQuery autocomplete -->
+    <script src="~/Admin/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+    <!-- starrr -->
+    <script src="~/Admin/vendors/starrr/dist/starrr.js"></script>
 }

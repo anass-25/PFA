@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Gestion_Offre";
+    Layout = "~/Views/Shared/AccueilFournisseur_Layout.cshtml";
+}
+
+@model List<Offre>
+
+<div class="container mt-4">
+    <div class="card mb-4">
+        <div class="card-header text-center">
+            <h2>Informations du Fournisseur</h2>
+        </div>
+        <div class="card-body">
+            <div class="row align-items-center">
+                @{
+                    var fournisseur = Model.FirstOrDefault()?.Fournisseur;
+                    var fournisseurPhoto = fournisseur?.Photo ?? "default.png"; // Utiliser une image par défaut si aucune photo n'est disponible
+                }
+                <div class="col-md-3 text-center">
+                    <img src="~/images/@fournisseurPhoto" class="fournisseur-photo" alt="Photo du Fournisseur">
+                </div>
+                <div class="col-md-9">
+                    <div class="text-center">
+                        <h4 class="card-title">@fournisseur?.Nom @fournisseur?.Prenom</h4>
+                        <p class="card-text"><strong>Tel :</strong> @fournisseur?.Telephone</p>
+                        <div class="mr-3">
+                            <a href="@Url.Action("Add","Offre")"><button class="btn btn-primary">Ajouter</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (Model != null && Model.Count > 0)
+{
+    <div class="container mt-4">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>Titre</th>
+                    <th>Description</th>
+                    <th>Prix</th>
+                    <th>Date de Début</th>
+                    <th>Date de Fin</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    DateTime currentDate = DateTime.Now;
+
+                    foreach (var offre in Model)
+                    {
+                        bool isExpired = currentDate > offre.Date_Fin;
+                        string rowClass = isExpired ? "table-secondary" : "";
+                    }
+                }
+
+                @foreach (var offre in Model)
+                {
+                    bool isExpired = currentDate > offre.Date_Fin;
+                    string rowClass = isExpired ? "table-secondary" : "";
+
+                    <tr class="@rowClass">
+                        <td><img src="~/images/@offre.Photo" class="offre-image" alt="Offre Image"></td>
+                        <td>@offre.Titre</td>
+                        <td>@offre.Description</td>
+                        <td>@offre.Prix</td>
+                        <td>@offre.Date_Debut.ToShortDateString()</td>
+                        <td>@offre.Date_Fin.ToShortDateString()</td>
+                        <td>
+                            <a href="@Url.Action("Update", "Offre", new { id = offre.OffreId })" class="text-warning"><i class="fa fa-edit"></i></a>
+                            <a href="@Url.Action("Delete", "Offre", new { id = offre.OffreId })" class="text-danger ml-2"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="container mt-4">
+        <div class="alert alert-warning text-center">
+            Aucune offre trouvée pour ce fournisseur.
+        </div>
+    </div>
+}
+
+<style>
+    .offre-image {
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+    }
+
+    .expired-offer {
+        background-color: #f8d7da;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .fournisseur-photo {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .fa {
+        font-size: 1.5em;
+    }
+
+    .ml-2 {
+        margin-left: 0.5rem;
+    }
+
+    .table-secondary {
+        background-color: #f8f9fa;
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">

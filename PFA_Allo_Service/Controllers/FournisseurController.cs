@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PFA_Allo_Service.Models;
+using PFA_Allo_Service.ViewModel;
+using System.Security.Claims;
 
 namespace PFA_Allo_Service.Controllers
 {
@@ -15,41 +19,59 @@ namespace PFA_Allo_Service.Controllers
         {
             return View();
         }
-        public IActionResult Profile()
-        {
-            return View();
-        }
         public IActionResult Gestion_Offre() 
         {
-            return RedirectToAction("Index","Offre");
+            int? fournisseurId = HttpContext.Session.GetInt32("Id");
+            if (fournisseurId == null)
+            {
+                return RedirectToAction("Login", "Users");
+            }
+
+            var offres = db.Offres
+                                 .Include(o => o.Fournisseur)
+                                 .Where(o => o.FournisseurId == fournisseurId)
+                                 .ToList();
+
+            return View(offres);
         }
-        [HttpGet]
-        public IActionResult Subscribe(int abonnementId)
+        public async Task<IActionResult> Abonnement()
         {
-            var abonnement = db.Abonnements.Find(abonnementId);
+            var abonnements = await db.Abonnements
+                .Include(a => a.Paiement)
+                .ToListAsync();
+            return View(abonnements);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ChoisirAbonnement(int AbonnementId)
+        {
+            int? userId = HttpContext.Session.GetInt32("Id");
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+
+            var abonnement = await db.Abonnements
+                .FirstOrDefaultAsync(a => a.AbonnementId == AbonnementId);
+
             if (abonnement == null)
             {
                 return NotFound();
             }
-            HttpContext.Session.SetInt32("AbonnementId", abonnementId);
-            return View(abonnement);
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult SubscribeConfirmation()
-        {
-            var abonnementId = HttpContext.Session.GetInt32("AbonnementId");
-            if (abonnementId == null)
+
+            var fournisseur = await db.Fournisseurs.FirstOrDefaultAsync(f => f.Id == userId.Value);
+
+            if (fournisseur == null)
             {
-                return RedirectToAction("Index", "Home");
+                return NotFound();
             }
-            var fournisseurId = HttpContext.Session.GetInt32("FournisseurId");
-            if (fournisseurId == null)
-            {
-                return RedirectToAction("Index", "Home");
-            }
-            HttpContext.Session.Remove("AbonnementId");
-            return RedirectToAction("SubscriptionConfirmation");
+
+            fournisseur.Abonnement = abonnement;
+            abonnement.Fournisseurs ??= new List<Fournisseur>();
+            abonnement.Fournisseurs.Add(fournisseur);
+
+            await db.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Paiement), new { AbonnementId = abonnement.AbonnementId }); // Redirige vers l'action Paiement
         }
     }
 }

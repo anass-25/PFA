@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/Accueil_Layout.cshtml";
+}
+@model Avis
+@section styles {
+    <!-- Select2 -->
+    <link href="~/Admin/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="~/Admin/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="~/Admin/vendors/starrr/dist/starrr.css" rel="stylesheet">
+}
+<!-- page content -->
+<div class="right_col" role="main">
+    <div class="">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Modifier Avis</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <br />
+                        <form asp-action="Update" method="post" class="form-horizontal form-label-left" enctype="multipart/form-data">
+
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="Note">Note:</label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    <input asp-for="Note" class="form-control" />
+                                    <span asp-validation-for="Note" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="Date_Heures">Date et Heures:</label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    <input asp-for="Date_Heures" class="form-control" />
+                                    <span asp-validation-for="Date_Heures" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" asp-for="Commentaire">Commentaire:</label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    <input asp-for="Commentaire" class="form-control" />
+                                    <span asp-validation-for="Commentaire" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="item form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" asp-for="Show" /> @Html.DisplayNameFor(model => model.Show)
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-6 col-sm-6 offset-md-3">
+                                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                    <a asp-action="IndexAvis" asp-controller="Accueil" class="btn btn-secondary">Annuler</a>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts {
+    <!-- Select2 -->
+    <script src="~/Admin/vendors/select2/dist/js/select2.full.min.js"></script>
+    <!-- Switchery -->
+    <script src="~/Admin/vendors/switchery/dist/switchery.min.js"></script>
+    <!-- Parsley -->
+    <script src="~/Admin/vendors/parsleyjs/dist/parsley.min.js"></script>
+    <!-- starrr -->
+    <script src="~/Admin/vendors/starrr/dist/starrr.js"></script>
+}
+

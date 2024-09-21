@@ -1,0 +1,41 @@
+﻿@model IEnumerable<PFA_Allo_Service.Models.Abonnement>
+
+
+@{
+    ViewData["Title"] = "Choisir un Abonnement";
+    Layout = "~/Views/Shared/AccueilFournisseur_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+
+<div class="row">
+    @if (Model != null && Model.Any())
+    {
+        @foreach (var abonnement in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">@abonnement.Type_Abonnement</h5>
+                        <p class="card-text">
+                            Date de début: @abonnement.Date_Debut.ToString("dd/MM/yyyy")
+                        </p>
+                        <a asp-action="SelectAbonnement" asp-route-id="@abonnement.AbonnementId" class="btn btn-primary">Choisir</a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>Aucun abonnement disponible pour le moment.</p>
+    }
+</div>

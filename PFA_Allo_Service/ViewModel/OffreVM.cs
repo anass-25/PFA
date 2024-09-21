@@ -4,6 +4,7 @@ namespace PFA_Allo_Service.ViewModel
 {
 	public class OffreVM
 	{
+		public int OffreId { get; set; }
 		[Required(ErrorMessage = "Le champ Prix est requis.")]
 		public int Prix { get; set; }
 

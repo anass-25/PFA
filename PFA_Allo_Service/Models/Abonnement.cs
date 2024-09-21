@@ -7,9 +7,8 @@ namespace PFA_Allo_Service.Models
         public int AbonnementId { get; set; }
         [DataType(DataType.Date)]
         public DateTime Date_Debut { get; set; }
-        [DataType(DataType.Date)]
         public string Type_Abonnement { get; set; }
         public IList<Fournisseur>?  Fournisseurs { get; set; }
-        public Paiement Paiement { get; set; }
+        public Paiement? Paiement { get; set; }
     }
 }

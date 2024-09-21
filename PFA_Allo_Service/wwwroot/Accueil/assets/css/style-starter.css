@@ -4152,6 +4152,8 @@ input[type="button"].btn-block {
   background-color: rgba(123, 89, 208, 0.5);
 }
 
+
+
 .custom-radio .custom-control-label::before {
   border-radius: 50%;
 }
@@ -17632,7 +17634,7 @@ header {
 header.nav-fixed {
   padding: 0px;
   background-color: var(--bg-color);
-  height: 90px;
+  height: 50px;
   border-bottom: none;
   box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.03);
 }
@@ -17919,9 +17921,9 @@ nav ul li a:before {
     box-shadow: 0 6px 19px rgba(0, 0, 0, 0.05);
   }
 
-  .navbar-nav:last-child {
+  /*.navbar-nav:last-child {
     border: 1px solid var(--border-color);
-  }
+  }*/
 
   .navbar-expand-lg .navbar-nav .nav-item {
     -webkit-animation-name: none;
@@ -18097,7 +18099,7 @@ nav ul li a:before {
 }
 
 .w3l-main-slider .banner-view {
-  background: url(../images/banner1.jpg) no-repeat center;
+  background: url(~/Accueil/assets/images/imageAccueil.jpg);
   -ms-background-size: cover;
   background-size: cover;
   z-index: 0;

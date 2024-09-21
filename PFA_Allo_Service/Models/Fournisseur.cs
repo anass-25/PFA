@@ -7,13 +7,13 @@ namespace PFA_Allo_Service.Models
     {
         //[Key]
         //public int Id { get; set; } 
-        public bool Disponibiliter { get; set; }
-        //public string abonnement { get; set; }
-        public Metier metier { get; set; }
-        public int MetierId { get; set; }
+        public string Disponibiliter { get; set; }
+        public string Photo { get; set; }
+        public Metier? metier { get; set; }
+        public int? MetierId { get; set; }
         public IList<Offre>? Offres { get; set; }
-        public Abonnement Abonnement { get; set; }
-        public int AbonnementId { get; set; }
+        public Abonnement? Abonnement { get; set; }
+        public int? AbonnementId { get; set; }
         public IList<Avis>? Avis { get; set; }
         public IList<Message>? Messages { get; set; }
         public IList<Reclamation>? Reclamations { get; set; }

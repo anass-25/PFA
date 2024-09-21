@@ -11,9 +11,9 @@ namespace PFA_Allo_Service.Models
         public DateTime Date_Heures { get; set; }
         public string Commentaire { get; set; }
         public Boolean Show { get; set; }
-        public Client Client { get; set; }
-        public int  ClientId { get; set; }
-        public Fournisseur Fournisseur { get; set; }
-        public int  FournisseurId { get; set; }
+        public Client? Client { get; set; }
+        public int?  ClientId { get; set; }
+        public Fournisseur? Fournisseur { get; set; }
+        public int?  FournisseurId { get; set; }
     }
 }

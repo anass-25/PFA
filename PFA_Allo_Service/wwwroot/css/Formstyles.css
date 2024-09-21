@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Adjust as needed */
-    padding: 20px; /* Adjust as needed */
-    box-sizing: border-box; /* Ensure padding is included in height */
+    height: 100vh;  Adjust as needed 
+    padding: 20px;  Adjust as needed 
+    box-sizing: border-box;  Ensure padding is included in height 
 }
 
 
@@ -59,7 +59,7 @@
   .wizard_horizontal ul.wizard_steps li a.disabled .step_no {
     background: #ccc;
   }
-  /**************************************************************************/
+  ************************************************************************
   .wizard_horizontal ul.wizard_steps li a .step_no {
     width: 40px;
     height: 40px;
@@ -72,7 +72,7 @@
     position: relative;
     z-index: 5;
   }
-  /*******************************************************************************/
+  *****************************************************************************
   .wizard_horizontal ul.wizard_steps li a.selected:before,
   .step_no {
     background: #34495E;
@@ -84,7 +84,7 @@
     background: #1ABB9C;
     color: #fff;
   }
-  /*******************************************************************************/  
+  *****************************************************************************  
   .wizard_horizontal ul.wizard_steps li:first-child a:before {
     left: 50%;
   }
@@ -166,7 +166,7 @@
     z-index: 4;
     left: 49%;
   }
-  /*******************************************************************************/
+  *****************************************************************************
   .wizard_verticle ul.wizard_steps li a.disabled .step_no {
     background: #ccc;
   }
@@ -195,7 +195,7 @@
     background: #1ABB9C;
     color: #fff;
   }
- /*******************************************************************************/
+ *****************************************************************************
   .wizard_verticle ul.wizard_steps li:first-child a:before {
     left: -8px;
     border-left: none;
@@ -260,5 +260,5 @@
 
 
         ul.wizard_steps.anchor {
-            margin-left: -50px; /* Adjust the value as needed */
+            margin-left: -50px;  Adjust the value as needed 
         }
